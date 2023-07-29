@@ -751,9 +751,9 @@ section {
   }
 }
 
-.page-about .about {
+/* .page-about .about {
   padding: 0 0 80px 0;
-}
+} */
 
 /*--------------------------------------------------------------
 # About Section
@@ -821,6 +821,25 @@ section {
 .services-list .service-item .description {
   line-height: 24px;
   font-size: 14px;
+}
+
+.services-cta {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-top: 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: rgba(var(--color-default-rgb), 0.4);
+  background: var(--color-primary);
+}
+
+.services-cta:hover {
+  background: #ffe886;
+  color: rgba(var(--color-default-rgb), 0.4);
 }
 
 /*--------------------------------------------------------------
@@ -1407,6 +1426,7 @@ section {
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+
 .contact {
   background: url("../img/contact-bg.png") left top no-repeat;
   background-size: contain;
@@ -1436,7 +1456,7 @@ section {
 .contact .info-item i {
   font-size: 20px;
   background: var(--color-primary);
-  color: #fff;
+  color: rgba(var(--color-default-rgb), 0.4);
   width: 44px;
   height: 44px;
   display: flex;
