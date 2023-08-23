@@ -19,13 +19,21 @@
   --font-secondary: "Raleway", sans-serif;
 }
 
+/* --------h2 colors are color-tertiary
+-----------h3, h4 colors are color-secondary
+-----------body text colors are color-tertiary */
+
 /* Colors */
 :root {
   --color-default: #2b180d;
-  --color-primary: #ffd936;
-  --color-secondary: #1b2f45;
+  /* --color-primary: #ffd936; */
+  --color-primary: #fff;
+  /* --color-secondary: #1b2f45; */
+  --color-secondary: #8c7c6c;
   /* --color-tint: #ffe886;rgb(255, 217, 54, ); */
-  --color-tint: rgb(255, 217, 54, 0.7);
+  --color-tint2: #ccbfad;
+  --color-tint: #faf9f7;
+  --color-tertiary: #302f35;
 }
 
 /* Smooth scroll behavior */
@@ -38,7 +46,7 @@
 --------------------------------------------------------------*/
 body {
   font-family: var(--font-default);
-  color: var(--color-default);
+  color: var(--color-tertiary);
 }
 
 a {
@@ -89,6 +97,7 @@ section {
 .section-header h2 {
   font-size: 32px;
   font-weight: 600;
+  color: var(--color-tertiary);
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
@@ -100,7 +109,7 @@ section {
   display: block;
   width: 60px;
   height: 2px;
-  background: var(--color-primary);
+  background: var(--color-secondary);
   left: 0;
   right: 0;
   bottom: 0;
@@ -125,7 +134,7 @@ section {
 
 .breadcrumbs:before {
   content: "";
-  background-color: rgba(27, 47, 69, 0.7);
+  background: rgba(140, 124, 108, 0.7);
   position: absolute;
   inset: 0;
 }
@@ -178,7 +187,7 @@ section {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: var(--color-primary);
+  background: var(--color-secondary);
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -192,7 +201,9 @@ section {
 }
 
 .scroll-top:hover {
-  background: rgba(86, 184, 230, 0.8);
+  background: var(--color-tint2);
+
+  /* background: rgba(86, 184, 230, 0.8); */
   color: #fff;
 }
 
@@ -261,7 +272,9 @@ section {
 }
 
 .header.sticked {
-  background: rgba(27, 47, 69, 0.9);
+  /* background: rgba(27, 47, 69, 0.9); */
+  background: var(--color-secondary);
+
   padding: 12px 0;
 }
 
@@ -397,7 +410,9 @@ section {
   }
 
   .navbar .nav-contact:hover {
-    background: #ffe886;
+    background: var(--color-tint);
+
+    /* background: #ffe886; */
     color: var(--color-secondary);
   }
 }
@@ -542,7 +557,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(255, 217, 54, 0.5);
+  /* background-color: rgb(255, 217, 54, 0.5); */
   /* backdrop-filter: blur(3px); */
   /* z-index: 0; */
 }
@@ -561,7 +576,9 @@ section {
 .hero:before {
   position: absolute;
   content: "";
-  background: rgba(27, 47, 69, 0.6);
+  /* background: rgba(140, 124, 108, 0.7); */
+
+  /* background: rgba(27, 47, 69, 0.6); */
   inset: 0;
 }
 
@@ -613,7 +630,9 @@ section {
 }
 
 .hero .btn-get-intouch:hover {
-  background: #ffe886;
+  /* background: #ffe886; */
+  background: var(--color-tint);
+
   color: var(--color-secondary);
 }
 
@@ -671,13 +690,15 @@ section {
   padding: 6px 12px;
   border-radius: 50px;
   transition: 0.5s;
-  color: rgba(var(--color-default-rgb), 0.4);
-  background: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-secondary);
 }
 
 .about-cta:hover {
-  background: #ffe886;
-  color: rgba(var(--color-default-rgb), 0.4);
+  background: var(--color-tint2);
+  color: var(--color-tertiary);
+
+  /* color: rgba(var(--color-default-rgb), 0.4); */
 }
 
 .about .img-bg {
@@ -686,7 +707,8 @@ section {
 }
 
 .about .slides {
-  background-color: #f7f9fc;
+  background-color: var(--color-primary);
+  /* background-color: #f7f9fc; */
 }
 
 .about h3 {
@@ -698,7 +720,8 @@ section {
 .about h4 {
   font-size: 18px;
   font-weight: 400;
-  color: #29486a;
+  /* color: #29486a; */
+  color: var(--color-secondary);
   font-family: var(--font-secondary);
 }
 
@@ -815,7 +838,8 @@ section {
 }
 
 .services-list .service-item .title a:hover {
-  color: #38618e;
+  color: var(--color-tertiary);
+  /* color: #38618e;*/
 }
 
 .services-list .service-item .description {
@@ -823,7 +847,8 @@ section {
   font-size: 14px;
 }
 
-.services-cta {
+.services-cta,
+.service-item .cta {
   font-family: var(--font-secondary);
   font-weight: 700;
   font-size: 16px;
@@ -833,21 +858,31 @@ section {
   margin-top: 30px;
   border-radius: 50px;
   transition: 0.5s;
-  color: rgba(var(--color-default-rgb), 0.4);
-  background: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-secondary);
 }
 
 .services-cta:hover {
-  background: #ffe886;
-  color: rgba(var(--color-default-rgb), 0.4);
+  background: var(--color-tint2);
+  color: var(--color-tertiary);
+}
+
+.services-list .service-item .title .stretched-link::after {
+  bottom: 60px;
 }
 
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
 .call-to-action {
-  background: linear-gradient(rgba(27, 47, 69, 0.8), rgba(27, 47, 69, 0.8)),
+  background: linear-gradient(
+      rgba(140, 124, 108, 0.7),
+      rgba(140, 124, 108, 0.7)
+    ),
     url("../img/cta1-bg.jpg") center center;
+
+  /* background: linear-gradient(rgba(27, 47, 69, 0.8), rgba(27, 47, 69, 0.8)),
+    url("../img/cta1-bg.jpg") center center; */
   background-size: cover;
   padding: 100px 0;
 }
@@ -885,7 +920,8 @@ section {
 }
 
 .call-to-action .btn-get-intouch:hover {
-  background: #ffe886;
+  background: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 /*--------------------------------------------------------------
@@ -1186,7 +1222,8 @@ section {
 }
 
 .testimonials .testimonial-item .stars i {
-  color: #ffc107;
+  color: var(--color-tint2);
+  /* color: #ffc107; */
   margin: 0 1px;
 }
 
@@ -1201,12 +1238,15 @@ section {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 0;
-  color: #111;
+  color: var(--color-secondary);
+  /* color: #111; */
 }
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
-  color: #999;
+  color: var(--color-tint2);
+
+  /* color: #999; */
   margin: 0;
 }
 
@@ -1223,12 +1263,16 @@ section {
 .testimonials .swiper-pagination .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  background-color: #e8eff6;
+  background-color: var(--color-secondary);
+
+  /* background-color: #e8eff6; */
   opacity: 1;
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--color-primary);
+  background-color: var(--color-tint2);
+
+  /* background-color: var(--color-primary); */
 }
 
 .testimonials .swiper-slide {
@@ -1472,7 +1516,8 @@ section {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 5px;
-  color: #1c88ba;
+  color: var(--color-secondary);
+  /* color: #1c88ba; */
 }
 
 .contact .info-item p {
@@ -2147,7 +2192,9 @@ section {
 }
 
 .footer .footer-content {
-  background-color: #f7f9fc;
+  background-color: var(--color-primary);
+
+  /* background-color: #f7f9fc; */
   background-size: contain;
   padding: 60px 0 30px 0;
 }
@@ -2194,7 +2241,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
   color: #fff;
   border-radius: 50px;
 }
@@ -2206,7 +2253,8 @@ section {
 .footer .footer-content h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #29486a;
+  color: var(--color-secondary);
+  /* color: #29486a; */
   position: relative;
   padding-bottom: 12px;
 }
@@ -2239,14 +2287,14 @@ section {
 }
 
 .footer .footer-content .footer-links ul a {
-  color: #31547c;
+  color: var(--color-secondary);
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
 }
 
 .footer .footer-content .footer-links ul a:hover {
-  color: var(--color-primary);
+  color: var(--color-tertiary);
 }
 
 .footer .footer-content .footer-contact p {
